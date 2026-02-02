@@ -40,7 +40,7 @@
 //     },
 //   ]);
 //   function handleChange() {
-//     setInput((prev) => prev); 
+//     setInput((prev) => prev);
 //   }
 
 //   return (
@@ -56,7 +56,7 @@
 
 // export default App;
 import { useState } from "react";
-import axios from "axios";
+import instance from "./axios";
 import "./App.css";
 
 const App = () => {
@@ -88,17 +88,9 @@ const App = () => {
   const selectedField = fields.find((f) => f.id === selectedId);
   async function saveForm() {
     try {
-      const response = await axios.post(
-        "http://localhost:3000/form",
-        {
-          fields: fields,
-        },
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        },
-      );
+      const response = await instance.post("/form", {
+        fields: fields,
+      });
 
       console.log("Saved Form:", response.data);
       alert("Form saved successfully ");
@@ -106,7 +98,6 @@ const App = () => {
       alert("Error saving form ");
     }
   }
-
 
   return (
     <div className="app">
