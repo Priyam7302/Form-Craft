@@ -1,14 +1,3 @@
-// import Form from "../models/form.js";
-// export async function saveForm(req, res) {
-//   try {
-//     let data = req.body;
-//     const form = new Form(data);
-//     await Form.save();
-//     return res.status(201).json({ message: "Form Created successfully" }, data);
-//   } catch (error) {
-//     return res.status(400).json({ message: error.message });
-//   }
-// }
 import Form from "../models/form.js";
 
 export async function saveForm(req, res) {

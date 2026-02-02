@@ -1,26 +1,23 @@
-// import mongoose from "mongoose";
-// const formSchema = new mongoose.Schema(
-//   {
-//     forms: { type: String },
-//   },
-//   { timestamps: true },
-// );
-// const Form = mongoose.model("Form", formSchema);
-// export default Form;
 import mongoose from "mongoose";
 
 const fieldSchema = new mongoose.Schema(
   {
     id: Number,
     type: String,
+
     label: String,
     placeholder: String,
-    value: String,
+
+    value: mongoose.Schema.Types.Mixed, // IMPORTANT
+    options: [String], // select / radio
+    checked: Boolean, // checkbox
+
     autofocus: Boolean,
     autocomplete: Boolean,
   },
   { _id: false },
 );
+
 
 const formSchema = new mongoose.Schema(
   {
