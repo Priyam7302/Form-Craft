@@ -38,16 +38,23 @@ body {
   padding: 10px;
   margin-bottom: 10px;
   border: none;
-  background: #2563eb;
-  color: #fff;
+  /* background: #2563eb; */
+  /* color: #fff; */
   border-radius: 4px;
   cursor: pointer;
 }
 
 .left button:hover {
-  background: #1e40af;
+  background: #4570ff;
+   color: #fff;
 }
-
+.submit-btn,.save-form-btn{
+  border: none;
+  background: #4570ff;
+   color: #fff;
+   padding: 10px;
+   border-radius: 2px;
+}
 /* MIDDLE PANEL */
 .middle {
   width: 40%;
@@ -103,12 +110,32 @@ textarea:focus {
   color: #6b7280;
 }
 input,
-textarea,
-button {
-  background-color: #ffffff !important;
+textarea {
+  background-color: #ffffff important;
   color: #111827 !important;
 }
 
 input[type="checkbox"] {
   accent-color: #2563eb;
+}
+
+.form-item {
+  position: relative;
+}
+
+/* DELETE BUTTON */
+.delete-btn {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  border: none;
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background: #dc2626;
+   color: white;
 }
