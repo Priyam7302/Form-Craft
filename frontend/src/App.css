@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: #f4f6f8;
+}
+
+/* MAIN LAYOUT */
+.app {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* COMMON PANEL STYLE */
+.panel {
+  background: #ffffff;
+  padding: 16px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* LEFT PANEL */
+.left {
+  width: 25%;
+}
+
+.left button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  background: #2563eb;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.left button:hover {
+  background: #1e40af;
+}
+
+/* MIDDLE PANEL */
+.middle {
+  width: 40%;
+}
+
+.form-item {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-item.active {
+  border: 2px solid #2563eb;
+}
+
+.form-item label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* INPUTS */
+input,
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  border: 1px solid #d1d5db;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+/* RIGHT PANEL */
+.right {
+  width: 35%;
+}
+
+.right label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.right p {
+  color: #6b7280;
+}
