@@ -19,7 +19,7 @@ services:
   - type: web
     name: form-craft-frontend
     env: static
-    region: singapore
+    # region: singapore
     plan: free
     rootDir: frontend   # change to client if your folder is named client
     buildCommand: npm install && npm run build
