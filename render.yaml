@@ -1,0 +1,32 @@
+services:
+
+  # ================= BACKEND =================
+  - type: web
+    name: form-craft-backend
+    env: node
+    region: singapore
+    plan: free
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGO_URL
+        sync: false   # value will be added in Render Dashboard
+
+  # ================= FRONTEND =================
+  - type: web
+    name: form-craft-frontend
+    env: static
+    region: singapore
+    plan: free
+    rootDir: frontend   # change to client if your folder is named client
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist   # Vite output
+    envVars:
+      - key: VITE_API_BASE_URL
+        fromService:
+          name: form-craft-backend
+          type: web
+          envVarKey: RENDER_EXTERNAL_URL
